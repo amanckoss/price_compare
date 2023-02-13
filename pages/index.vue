@@ -1,8 +1,9 @@
 <template>
   <div class="sheet">
+    <a-typography-title>Рекомендовані товари</a-typography-title>
     <a-row :gutter="[16, 24]">
-      <template v-for="item in [... Array(12)]">
-        <a-col :span="4">
+      <template v-for="item in dataStore.defaultItems">
+        <a-col :xs="24" :sm="12" :md="8" :lg="8" :xl="6">
           <product-item :item="item"/>
         </a-col>
       </template>
@@ -10,9 +11,11 @@
   </div>
 </template>
 
-<script setup>
-
+<script lang="ts" setup>
 import ProductItem from "../components/productItem";
+import {useDataStore} from "~/store/dataStore";
+
+const dataStore = useDataStore()
 </script>
 
 <style lang="less" scoped>

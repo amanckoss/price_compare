@@ -5,26 +5,17 @@
       <a-layout-content class="root-content" style="padding: 16px 16px">
         <slot/>
       </a-layout-content>
-
-      <a-layout-footer style="text-align: center">
-        Ant Design ©2018 Created by Ant UED
-      </a-layout-footer>
       <div class="spotlight"/>
+      <root-footer/>
     </a-layout>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
-import RootHeader from "~/components/rootHeader.vue";
-export default defineComponent({
-  components: {RootHeader},
-  setup() {
-    return {
-      selectedKeys: ref<string[]>(['2']),
-    };
-  },
-});
+<script lang="ts" setup>
+import {useDataStore} from "~/store/dataStore";
+
+const dataStore = useDataStore()
+dataStore.fetchData();
 </script>
 
 <style lang="less" scoped>
@@ -32,15 +23,16 @@ export default defineComponent({
 
 .spotlight {
   position: absolute;
-  bottom: -200px;
+  bottom: -400px;
   width: 100%;
   background: @gradient-color;
-  filter: blur(10vh);
-  height: 20vh;
-  z-index: 1;
+  filter: blur(20vh);
+  height: 40vh;
 }
 .root-layout {
   position: relative;
   background: @background-black;
+  min-height: 100vh;
+  overflow: hidden;
 }
 </style>

@@ -1,7 +1,6 @@
 // nuxt.config.ts
 import Components from 'unplugin-vue-components/vite';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
-import {fileURLToPath} from "url";
 
 export default defineNuxtConfig({
     vite: {
@@ -26,6 +25,14 @@ export default defineNuxtConfig({
             noExternal: ['moment', 'compute-scroll-into-view', 'ant-design-vue','@ant-design/icons-vue'],
         },
     },
+    modules: [
+        [
+            '@pinia/nuxt',
+            {
+                autoImports: ['defineStore', 'acceptHMRUpdate'],
+            },
+        ],
+    ],
     // alias: {
     //     'style': fileURLToPath(new URL('./assets/style', import.meta.url)),
     // },

@@ -1,22 +1,41 @@
 <template>
   <a-layout-header class="root-header">
-    <a-typography-text class="header-logo">Порівняння цін</a-typography-text>
+    <NuxtLink to="/"><a-typography-text class="header-logo">Порівняння цін</a-typography-text></NuxtLink>
     <a-space size="middle">
-      <a-button type="primary"><NuxtLink to="/markedItems">Вибрані товари</NuxtLink></a-button>
+      <a-button type="primary"><NuxtLink to="/myPage">Вибрані товари</NuxtLink></a-button>
       <a-button><NuxtLink to="/login">Вхід</NuxtLink></a-button>
-      <outlined-button icon-color="green">
+      <outlined-button icon-color="#fff" v-on:submit="openSettingsModal">
         <appstore-outlined />
       </outlined-button>
     </a-space>
   </a-layout-header>
+  <a-modal v-model:visible="visible" title="Фільтр магазинів">
+    <template v-for="item in [...Array(5)]">
+      <div style="display: flex; justify-content: space-between; margin: 8px 0">
+        Some store
+        <a-checkbox></a-checkbox>
+      </div>
+    </template>
+    <template #footer>
+      <a-button key="back" type="primary">Закрити</a-button>
+    </template>
+  </a-modal>
 </template>
 
-<script>
-import OutlinedButton from "~/components/outlinedButton";
-export default {
-  name: "rootHeader",
-  components: {OutlinedButton}
-}
+<script lang="ts">
+import {defineComponent, ref} from "vue";
+export default defineComponent({
+  setup() {
+    const visible = ref(false)
+    const openSettingsModal = () => {
+      visible.value = true
+    }
+    return {
+      openSettingsModal,
+      visible
+    }
+  }
+})
 </script>
 
 <style lang="less">
@@ -28,7 +47,6 @@ export default {
   background: transparent;
 }
 .header-logo {
-  //color: rgba(0, 0, 0, 0.88);
   align-items: center;
   font-weight: bold;
   font-size: 18px;
@@ -40,9 +58,5 @@ export default {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  //-webkit-align-items: center;
-  //-webkit-box-align: center;
-  //-ms-flex-align: center;
-  //align-items: center;
 }
 </style>

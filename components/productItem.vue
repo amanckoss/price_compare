@@ -5,25 +5,25 @@
         <heart-outlined />
       </outlined-button>
       <div class="img_wrap">
-        <img alt="example" src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg" />
+        <img alt="example" :src="item.img" />
       </div>
     </template>
-    <a-card-meta title="Europe Street beat">
-      <template
-          #description>www.instagram.com
-          #description>www.instagram.com
-          #description>www.instagram.com
+    <a-card-meta :title="item.title">
+      <template #description>
+        <template v-for="price in item.price">
+          <div>{{price.market}} {{price.value}}</div>
+        </template>
       </template>
     </a-card-meta>
   </a-card>
 </template>
 
-<script>
-import OutlinedButton from "./outlinedButton";
-export default {
-  name: "productItem",
-  components: {OutlinedButton}
-}
+<script lang="ts" setup>
+import {ItemStructure} from "~/store/type";
+
+const props = defineProps(['item'])
+const item = props.item as ItemStructure;
+
 </script>
 
 <style lang="less" scoped>
@@ -42,5 +42,6 @@ export default {
 .button {
   position: absolute;
   right: 0;
+  margin: @margin-xs;
 }
 </style>

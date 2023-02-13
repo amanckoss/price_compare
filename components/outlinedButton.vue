@@ -1,23 +1,36 @@
 <template>
-  <a-button class="button" :style="styles">
+  <a-button class="button" :style="styles" @click="onClick">
     <template #icon>
       <slot></slot>
     </template>
   </a-button>
 </template>
 
-<script setup>
-import { computed } from 'vue'
+<script lang="ts">
+import {computed, defineComponent} from 'vue'
+export default defineComponent({
+  props: {
+    iconColor: {
+      type: String,
+      default: '#faad14'
+    }
+  },
+  emits: ['submit'],
+  setup(props, emits) {
+    // const emit = defineEmits(['submit']);
 
-const props = defineProps({
-  iconColor: {
-    type: String,
-    default: '#faad14'
+    const styles = computed(() => {
+      return 'color: ' + props.iconColor;
+    })
+    const onClick = () => {
+      emits.emit('submit')
+    }
+    return {
+      styles,
+      onClick
+    }
   }
-})
-const styles = computed(() => {
-  return 'color: ' + props.iconColor;
-})
+});
 </script>
 
 <style lang="less" scoped>
@@ -26,7 +39,6 @@ const styles = computed(() => {
   width: auto;
   border: 0;
   padding: @padding-xs;
-  margin: @margin-xs;
 &:hover {
    background: @main-background-color;
  }

@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b18f903-01e7-4f50-b954-8d501c3db896" name="Changes" comment="" />
+    <list default="true" id="2b18f903-01e7-4f50-b954-8d501c3db896" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/img/fb_share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/marketTable.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/rootFooter.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/settingsModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/myPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/firebase.client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/authStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/commodityStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/dataStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/offeredStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/_variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/_variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/outlinedButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/outlinedButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/productItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/productItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/rootHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/rootHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/authorization.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/authorization.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/registration.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/registration.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,32 +39,41 @@
         <option value="SCSS File" />
         <option value="Less File" />
         <option value="Vue Single File Component" />
+        <option value="TypeScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Krd3hiKY1YnKuPheBCphBTeCVE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/amanckos/WebstormProjects/price_compare",
-    "list.type.of.created.stylesheet": "Less",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/amanckos/WebstormProjects/price_compare&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;Less&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/public/img" />
       <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/layouts" />
     </key>
@@ -62,11 +97,26 @@
       <workItem from="1675271730455" duration="15409000" />
       <workItem from="1675288804204" duration="111000" />
       <workItem from="1675288964643" duration="23563000" />
-      <workItem from="1675682763388" duration="28233000" />
+      <workItem from="1675682763388" duration="32540000" />
+      <workItem from="1675809872189" duration="3074000" />
+      <workItem from="1675857860528" duration="5754000" />
+      <workItem from="1675881265934" duration="32506000" />
+      <workItem from="1676287442956" duration="20156000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

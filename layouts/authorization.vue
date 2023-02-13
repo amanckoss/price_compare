@@ -7,17 +7,7 @@
   </div>
 </template>
 
-<script>
-import {defineComponent} from "vue";
-import Authorization from "../pages/registration";
-import Login from "../pages/login";
-
-export default defineComponent({
-  components: {Login, Authorization},
-  setup() {
-
-  },
-});
+<script lang="ts" setup>
 </script>
 
 <style lang="less" scoped>
@@ -26,13 +16,15 @@ export default defineComponent({
   position: relative;
   height: 100vh;
   background: @background-black;
+  overflow: hidden;
 }
 .authorization-sheet {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
+  min-width: 656px;
+  width: 40%;
   background: @main-background-color;
   box-shadow: rgb(0 0 0 / 10%) 0 2px 10px 2px;
   border-radius: @border-radius-sheet;
@@ -40,11 +32,11 @@ export default defineComponent({
 }
 .spotlight {
   position: absolute;
-  bottom: -200px;
+  bottom: -400px;
   width: 100%;
   background: @gradient-color;
   filter: blur(20vh);
-  height: 20vh;
+  height: 40vh;
   z-index: 1;
 }
 </style>
